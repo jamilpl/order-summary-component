@@ -1,0 +1,145 @@
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: repeat-x;
+  background-color: var(--pale-blue);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  width: 90%;
+  max-width: 370px;
+  height: auto;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+.main__img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.main__article {
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.main__title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.main__paragraph {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--desaturated-blue);
+}
+
+.main__price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fe;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.main__price img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.main__plan p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.main__plan p:last-child {
+  font-size: 1.5rem;
+  color: var(--desaturated-blue);
+}
+
+.main__price a {
+  margin-left: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.main__price a:hover {
+  text-decoration: none;
+  color: #766cf1;
+}
+
+.main__cta {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+}
+
+.main__cta:hover {
+  background-color: #766cf1;
+}
+
+.main__cta--no-border {
+  margin-top: 5px;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  background-color: transparent;
+}
+
+.main__cta--no-border:hover {
+  color: var(--dark-blue);
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+  }
+
+  .main__article {
+    padding: 20px 35px 35px;
+  }
+
+  .main__price {
+    height: 85px;
+  }
+}
